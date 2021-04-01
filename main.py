@@ -16,3 +16,6 @@ if __name__ == '__main__':
 
 print('helloworld')
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
+
+# 首位两难顾, 天地有真情
+# 你在说什么, 人都不理你

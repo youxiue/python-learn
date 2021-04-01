@@ -49,7 +49,7 @@ print(keyword.kwlist)
 
 # ---------------------------------------------------------------------
 # 变量
-name = 'xiao mei mei'
+name = 'zhangsan'
 print(name)
 print('标识', id(name))
 print('类型', type(name))
