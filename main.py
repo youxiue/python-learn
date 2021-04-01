@@ -18,3 +18,5 @@ print('helloworld')
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
 
 # python大法好, 每天没烦恼
+# 首位两难顾, 天地有真情
+# 你在说什么, 人都不理你
