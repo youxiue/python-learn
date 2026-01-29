@@ -29,20 +29,20 @@ print(a)
 # 执行顺序 右 -> 左
 # 支持链式赋值
 a = b = c = 20
-print(a, id(a), b, id(b), c, id(c))
+print(a, id(a), b, id(b), c, id(c)) # id相同
 # 支持参数赋值
 a += 30  # a = a + 30
 print(a)
 a -= 30  # a = a - 30
 print(a)
 a *= 2  # a = a * 2
-print(a, type(a))  # int
+print(a, type(a))  # 40 int
 a /= 2  # a = a / 2
-print(a, type(a))  # float
+print(a, type(a))  # 20.0 float
 a /= 3  # a = a / 3
-print(a, type(a))
+print(a, type(a)) #  6.666666666666667 <class 'float'>
 a //= 2  # a = a // 2
-print(a)
+print(a) # 3.0
 
 # 支持系列解包赋值, 要求左右个数相同.
 a, b, c = 20, 30, 40

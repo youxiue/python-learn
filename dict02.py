@@ -30,7 +30,7 @@ print(d)
 key = 'age'
 d[key] = 1000
 print(d)
-lst = [10, 20 , 30]
+lst = [10, 20, 30]
 # d = {lst: 100} # TypeError: unhashable type: 'list'
 # print(d)
 

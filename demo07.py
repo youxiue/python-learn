@@ -10,7 +10,7 @@ b = int(input('b:'))
         print(a, '小于', b)
     
     
-    if ... else 的简写格式
+    if ... else 的简写格式:  true执行块 if 条件判断 else false执行块
     
 '''
 print((str(a) + '大于等于' + str(b)) if a >= b else (str(a) + '小于' + str(b)))

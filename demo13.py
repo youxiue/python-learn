@@ -11,7 +11,7 @@
 '''
 
 # 第一种创建方式
-lst = ['hello', 'world', 98, 'hello', 'jojo']
+lst = ['hello', 'world', 98, 'python', 'good']
 
 # 第二种创建方式, 使用内置函数 list()
 lst2 = list(['hello', 'world', 98])
@@ -23,9 +23,9 @@ index() 返回指定元素的索引
     2. 如果查询的元素在列表中不存在, 则会抛出 ValueError 异常
     3. 还可以在指定的 star 和 stop 之间进行查询 (含头不含尾)
 '''
-print(lst.index('world'))
+print(lst.index('hello')) # 0
 # print(lst.index('python'))
-print(lst.index('world', 1, 3))  #
+print(lst.index('world', 1, 3))  # 1
 
 '''
 获取列表中的单个元素
@@ -33,11 +33,11 @@ print(lst.index('world', 1, 3))  #
     2. 逆向索引 从 -N 到 -1,  例: lst[-2]
     3. 指定索引不存在, 则会抛出 IndexError
 '''
-print(lst[0], lst[-2])
+print(lst[0], lst[-2]) # hello python
 
 '''
 获取列表中的多个元素 -- 切片
-列表名[start: stop : step]
+列表名[start:stop:step]
     切片的结果是 原列表片段的拷贝
     含头不含尾
     
@@ -50,6 +50,8 @@ print(lst[0], lst[-2])
     step 是负数, (索引 start 和 stop 还是按正向0-N算):
         [:stop:step] -> 省略 start , start默认是列表的最后一个元素,     从start 开始往前计算切片
         [start::step] -> 省略 stop , stop默认是列表的第一个元素,   从start 开始往前计算切片
+
+    显性指定的索引都是从左往右开始计算的
 '''
 lst = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 print(lst[1:6:1])  # [2, 3, 4, 5, 6]
@@ -83,8 +85,8 @@ print(id(lst))
 lst.append(100)
 print(lst, id(lst))  # id并未发生变化
 # lst.append(lst2) # 将lst2 作为一个元素 添加到了 lst 中
-lst.extend(lst2)
-print(lst)
+lst.extend(lst2) # 将 lst2 中所有元素添加到 lst 中
+print(lst)  # [1, 2, 3, 4, 5, 6, 7, 8, 9, 100, 'hello', 'world', 98]
 lst.insert(2, 'in')
 print(lst)  # [1, 2, 'in', 3, 4, 5, 6, 7, 8, 9, 100, 'hello', 'world', 98]
 lst3 = ['kono', 'dioda', False]
@@ -106,22 +108,22 @@ print(lst)  # [1, 'kono', 'dioda', False]
 '''
 lst = [1, 2, 'j', 4, 4, 'k', 'jojo', 28, False, 'xixi']
 lst.remove(4)
-print(lst)
+print(lst) # [1, 2, 'j', 4, 'k', 'jojo', 28, False, 'xixi']
 lst.pop(1)
-print(lst)
+print(lst) # [1, 'j', 4, 'k', 'jojo', 28, False, 'xixi']
 # lst.pop(8)
 lst.pop()
-print(lst)
+print(lst) # [1, 'j', 4, 'k', 'jojo', 28, False]
 new_lst = lst[1:3]
-print(new_lst)  #
+print(new_lst)  # ['j', 4]
 print(lst)  # 原数组并没有新的变化, 只是 产生了一个新的数组
 
 '''不产生新的列表对象, 而是删除原列表中的内容'''
 lst[1:3] = []
-print(lst)
+print(lst) #  [1, 'k', 'jojo', 28, False]
 
 lst.clear()
-print(lst)
+print(lst) # []
 
 del lst
 print(lst)  # 这里再调用会抛出异常  NameError

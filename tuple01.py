@@ -25,19 +25,21 @@ print(t)
 print(type(t))
 
 # 只有一个元素的时候 必须要加上逗号 , 
-t = ('wo')
+t = ('wo') # 这样是一个字符串
 print(t) # wo 
 print(type(t)) # <class 'str'>
-t = ('wo',)
+t = ('wo',) # 加上，才是一个元组
 print(t) # ('wo',)
 print(type(t)) # <class 'tuple'>
 
 
 
 ''' 创建方式二, 使用内置函数 tuple() '''
-tup1 = tuple(('oh', 'my', 'god'))
+tup1 = tuple(('oh', 'my', 'god')) # 两层小括号(())
 print(tup1)
 print(type(tup1))
+
+# tup2 = tuple('oh', 'my', 'god') # 省略一层小括号将会报错
 
 ''' 空元组的创建方式 '''
 t1 = ()

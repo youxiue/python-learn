@@ -28,13 +28,13 @@ print(d)
 
 
 '''
-取值 ['key']
+取值 ['key']， 没有的key将会报错
 '''
 print(scores['张三'])
 # print(scores['子路']) # KeyError: '子路'
 
 '''
-取值 get('key')
+取值 get('key')， 没有的key将会返回None
 '''
 print(scores.get('张三'))
 print(scores.get('子路')) # None 不会报错

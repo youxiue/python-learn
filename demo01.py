@@ -10,10 +10,15 @@ print(4 + 1)
 
 # ---------------------------------------------------------------------
 # 将数据输出到文件中
-# a: 以读写的方式 打开文件,  +: 追加模式, 不会覆盖之前的内容
-# 1. 指定的盘符不能为空,
-# 2. 使用 file = fp
-fp = open('D:/python/open/demo01.txt', 'a+')
+'''
+  open() 函数
+  第一个参数是文件路径
+  第二个参数是打开方式
+      a  以读写的方式 打开文件
+      +  追加模式, 不会覆盖之前的内容
+'''
+fp = open('F:/temp/demo01.txt', 'a+')
+# 将数据输出到文件中, 指定的盘符不能为空
 print('python 大法好', file=fp)
 fp.close()
 
@@ -36,24 +41,26 @@ print('子曰:\'学而时习之\'')  # 子曰:'学而时习之'
 print(r'hello\nworld')  # hello\nworld
 # 使用原字符,  最后一个字符不能是\
 # print(r'hello\nworld\') #报错
-print(r'hello\nworld\\')  # 这样是可以的
+print(R'hello\nworld\\')  # 这样是可以的 hello\nworld\\
 
 # ---------------------------------------------------------------------
 # 保留关键字
 import keyword
 print(keyword.kwlist)
-# ['False', 'None', 'True', 'and', 'as', 'assert', 'async', 'await', 'break', 'class',
-# 'continue', 'def', 'del', 'elif', 'else', 'except', 'finally', 'for', 'from', 'global',
-# 'if', 'import', 'in', 'is', 'lambda', 'nonlocal', 'not', 'or', 'pass', 'raise',
-# 'return', 'try', 'while', 'with', 'yield']
+'''
+['False', 'None', 'True', 'and', 'as', 'assert', 'async', 'await', 'break', 
+'class', 'continue', 'def', 'del', 'elif', 'else', 'except', 'finally', 'for',
+ 'from', 'global', 'if', 'import', 'in', 'is', 'lambda', 'nonlocal', 'not', 
+ 'or', 'pass', 'raise', 'return', 'try', 'while', 'with', 'yield']
+'''
 
 # ---------------------------------------------------------------------
 # 变量
 name = 'zhangsan'
-print(name)
-print('标识', id(name))
-print('类型', type(name))
-print('值', name)
+print(name) # zhangsan
+print('标识', id(name)) # 标识 1879428285104
+print('类型', type(name)) # 类型 <class 'str'>
+print('值', name) # 值 zhangsan
 
 
 # ---------------------------------------------------------------------
@@ -74,8 +81,8 @@ print(Decimal('1.1') + Decimal('2.2'))  # 3.3
 # 布尔型
 f1 = True
 f2 = False
-print(f1, type(f1))
-print(f2, type(f2))
+print(f1, type(f1)) # True <class 'bool'>
+print(f2, type(f2)) # False <class 'bool'>
 print(f1 + 1)    # 2 说明True 表示1
 print(f2 + 1)    # 1 说明False 表示0
 
@@ -90,9 +97,15 @@ str1 = """人生苦短,
 str1 = '''人生苦短, 
 我用python'''
 
+str2 = '''
+人生苦短
+我用python
+'''
+print(str2)
+
 
 # ---------------------------------------------------------------------
-# 当剑str 类型与 int类型进行连接时, 需要将int转为 字符串类型
+# 当str 类型与 int类型进行连接时, 需要将int转为 字符串类型
 name = "小e"
 age = 20
 print(type(name), type(age))
@@ -112,11 +125,11 @@ s2 = '93.1'
 ft = True
 ff = False
 s3 = 'hello'
-print(int(s1), type(int(s1)))
+print(int(s1), type(int(s1))) # 129 <class 'int'>
 print(int(f1), type(int(f1))) # 98 <class 'int'>
 # print(int(s2), type(int(s2))) # 报错, 因为字符串为小数
-print(int(ft), type(int(ft))) # 1
-print(int(ff), type(int(ff))) # 0
+print(int(ft), type(int(ft))) # 1 <class 'int'>
+print(int(ff), type(int(ff))) # 0 <class 'int'>
 # print(int(s3), type(int(s3))) # 报错,  将str 转为 int , 字符串必须为整数型字符串
 
 #  使用 float() 将其他类型转为float 类型.
@@ -138,4 +151,4 @@ print(float(ff), type(float(ff))) # 0.0
 """
 
 # 可以在第一行声明编码格式
-#coding:urf-8
+#coding:utf-8

@@ -1,7 +1,7 @@
 # auth: youxiue
 # createTime: 2021/1/23 16:13
 
-answer = input('您是会员吗?y/n')
+answer = input('您是会员吗?y/n  ')
 money = int(input('购物金额: '))
 
 if answer == 'y':

@@ -14,13 +14,14 @@ range函数的优点: 不管range对象表示的整数序列有多长, 所有ran
 range(stop),  默认从 0 开始, 步长为1, 到 stop(不包含) 结束
 '''
 r1 = range(10)
-print(r1)
+print(r1) # range(0, 10)
 print(list(r1)) # [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 '''
 range(start, stop) 从 start 开始, 步长为1 , 到stop(不包含) 结束
+含头不含尾
 '''
 r2 = range(5, 10)
-print(r2)
+print(r2) # range(5, 10)
 print(list(r2)) # [5, 6, 7, 8, 9]
 
 '''

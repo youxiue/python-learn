@@ -2,7 +2,7 @@
 # createTime: 2021/1/23 16:13
 
 money = 10000  # 金额
-s = int(input('请输入取款金额'))  # 取款金额
+s = int(input('请输入取款金额:'))  # 取款金额
 # 判断金额是否充足
 if money >= s:
     money -= s
